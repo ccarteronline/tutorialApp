@@ -1,0 +1,19 @@
+<div class="app-navigation" [ngClass]="toggleNavType">
+  <div class="logoWrapper">
+    <div class="title">
+      {{title}}
+    </div>
+  </div>
+  <div class="hamburger" *ngIf="isCondensed" (click)="toggleHamburgerMenu()">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="linksWrapper" [ngClass]="menuType">
+    <ul class="links">
+      <li *ngFor="let link of links">
+        <a href="{{link.path}}">{{link.name}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
